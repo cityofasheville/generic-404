@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>City of Asheville 404</title>
     <link rel="shortcut icon" type="image/png" href="https://s3.amazonaws.com/coa-cdn/logo-square-no-text.png"/>
   </head>
@@ -17,27 +18,6 @@
       border-bottom: 0.1px solid #d9d9d9;
       z-index: 999;
     }
-    ul li {
-      line-height: 2em;
-    }
-    ul li:hover {
-      background-color: #d9d9d9;
-    }
-    #flyout-menu {
-      position: absolute;
-      left: 1em;
-      top: 1em;
-    }
-    .menu-arrow {
-      padding: 0 0.5em;
-      font-size: 0.75em;
-    }
-    .has-submenu.closed .menu-arrow.opened, .has-submenu.opened .menu-arrow.closed {
-      display: none;
-    }
-    .has-submenu.opened .menu-arrow.opened, .has-submenu.closed .menu-arrow.closed {
-      display: inline-block;
-    }
     a.logo {
       text-decoration: none;
       color: transparent;
@@ -46,102 +26,60 @@
       height: 2em;
       padding: 0.1em 0.1em 0;
     }
-    #flyout-menu.closed ~ nav, .has-submenu.closed ul {
-      display: none;
-    }
-    nav {
-      background-color: white;
-      border-right: 0.1px solid #d9d9d9;
-      border-bottom: 0.1px solid #d9d9d9;
-      position: absolute;
-      text-align: left;
-      left: 0vw;
-      z-index: 999;
-    }
-    nav ul {
-      list-style: none;
-    }
-    .navitem-text {
-      text-decoration: none;
-      color: #00488b;
-      cursor: pointer;
-    }
-    nav ul li a {
-      padding: 1em;
-    }
-    nav ul li > div {
-      padding: 0 1em;
-      cursor: pointer;
-    }
-    nav ul li a:hover {
-      color: inherit;
-    }
-    .navitem-text.external:hover, .navitem-text.external:focus {
-      text-decoration: underline;
-      color: #0069cc;
-    }
     footer {
       text-align: center;
       font-size: 0.75em;
       border-top: 0.1px solid #d9d9d9;
       padding: 1em 0;
       width: 100%;
-      position: absolute;
+      position: relative;
       bottom: 0;
     }
     img.no-text-logo {
       height: 2em;
     }
-    .accessible-dropdown-nav-list, #flyout-menu ~ nav ul {
-      z-index: 999;
+    h1 {
+      padding: 0 0.5rem;
+      text-align: center;
     }
-    #flyout-menu ~ nav > ul{
-      border: 1px solid gray;
+    p {
+      margin: 0 2rem;
     }
-
-    main {
-      padding: 1em 2em;
-    }
-
-    #link-card-container {
-      display: flex;
-    }
-
     .link-card {
-      flex-wrap: wrap;
-      flex: 1;
-      margin: 2rem;
+      display: inline-block;
       padding: 1rem;
       background-color: #f2f2f2;
       border-radius: 6px;
       text-decoration: none;
       color: inherit;
     }
-
     .link-card .title {
-      width: 100%;
       text-align: center;
       display: block;
-      font-size: 2rem;
-      padding: 0.5rem;
+      font-size: 1.5rem;
       color: #00488b;
     }
-
     .link-card:hover .title, .link-card:focus .title {
       color: #003566;
       text-decoration: underline;
     }
-
     .link-card .desc {
-      width: 100%;
       display: block;
       padding: 0.5rem;
     }
 
-    @media (min-width: 965px) {
-      div#main {
-          width: 76vw;
-          margin-left: 12vw;
+    @media (min-width: 760px) {
+      main {
+        padding: 1em 2em;
+      }
+      #link-card-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem;
+      }
+      .link-card {
+        flex: 1;
+        max-width: 25%;
       }
       header {
         text-align: right;
@@ -150,40 +88,6 @@
         text-decoration: none;
         position: absolute;
         left: 1em;
-      }
-      #flyout-menu ~ nav > ul {
-        border: none;
-      }
-      #flyout-menu {
-        display: none;
-      }
-      #flyout-menu.closed ~ nav {
-        display: inline-block;
-      }
-      nav {
-        position: relative;
-        border: none;
-        /*margin-top: 1em;*/
-        height: 97%;
-        /*background-color: transparent;*/
-      }
-      nav > ul, nav > ul > li {
-          height: 100%;
-          vertical-align: text-bottom;
-      }
-      nav ul li {
-          line-height: 2.5em;
-      }
-      nav > ul > li {
-        display: inline-block;
-      }
-      ul.accessible-dropdown-nav-list {
-        position: absolute;
-        background-color: white;
-        border: 1px solid gray;
-      }
-      ul.accessible-dropdown-nav-list li {
-        border-bottom: 0.1px solid #d9d9d9;
       }
     }
   </style>
@@ -195,7 +99,8 @@
     </header>
 
     <main>
-      <h1>Oops!  We're having trouble finding that URL.  Try one of these links instead.</h1>
+      <h1>Oops!</h1>
+      <p>We're having trouble finding that URL.  Try one of these links instead.</p>
       <div id="link-card-container"></div>
     </main>
     <script>
