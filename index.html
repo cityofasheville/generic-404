@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>City of Asheville 404</title>
+    <link rel="shortcut icon" type="image/png" href="https://s3.amazonaws.com/coa-cdn/logo-square-no-text.png"/>
+  </head>
+  <style media="screen">
+    html, body {
+      font-family: sans-serif;
+      color: #00488b;
+    }
+    header {
+      height: 3em;
+      text-align: center;
+      border-bottom: 0.1px solid #d9d9d9;
+      z-index: 999;
+    }
+    ul li {
+      line-height: 2em;
+    }
+    ul li:hover {
+      background-color: #d9d9d9;
+    }
+    #flyout-menu {
+      position: absolute;
+      left: 1em;
+      top: 1em;
+    }
+    .menu-arrow {
+      padding: 0 0.5em;
+      font-size: 0.75em;
+    }
+    .has-submenu.closed .menu-arrow.opened, .has-submenu.opened .menu-arrow.closed {
+      display: none;
+    }
+    .has-submenu.opened .menu-arrow.opened, .has-submenu.closed .menu-arrow.closed {
+      display: inline-block;
+    }
+    a.logo {
+      text-decoration: none;
+      color: transparent;
+    }
+    .logo img {
+      height: 2em;
+      padding: 0.1em 0.1em 0;
+    }
+    #flyout-menu.closed ~ nav, .has-submenu.closed ul {
+      display: none;
+    }
+    nav {
+      background-color: white;
+      border-right: 0.1px solid #d9d9d9;
+      border-bottom: 0.1px solid #d9d9d9;
+      position: absolute;
+      text-align: left;
+      left: 0vw;
+      z-index: 999;
+    }
+    nav ul {
+      list-style: none;
+    }
+    .navitem-text {
+      text-decoration: none;
+      color: #00488b;
+      cursor: pointer;
+    }
+    nav ul li a {
+      padding: 1em;
+    }
+    nav ul li > div {
+      padding: 0 1em;
+      cursor: pointer;
+    }
+    nav ul li a:hover {
+      color: inherit;
+    }
+    .navitem-text.external:hover, .navitem-text.external:focus {
+      text-decoration: underline;
+      color: #0069cc;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.75em;
+      border-top: 0.1px solid #d9d9d9;
+      padding: 1em 0;
+    }
+    img.no-text-logo {
+      height: 2em;
+    }
+    .accessible-dropdown-nav-list, #flyout-menu ~ nav ul {
+      z-index: 999;
+    }
+    #flyout-menu ~ nav > ul{
+      border: 1px solid gray;
+    }
+
+    #gsContainer {
+      width: 100%;
+      padding: 1em 0 2em;
+      text-align: center;
+    }
+
+    .gs_container .gs_top_table td:nth-child(2) td.gs_border {
+      width: unset;
+    }
+
+    .gs_container .gs_top_table td:nth-child(2) input.gs_search_box.watermark {
+      width: unset;
+    }
+
+    .gs_container .gs_top_table #tdSearchHistory a#btnSearchHistory, .gs_container .gs_top_table a#btnSearch .gs_go_img {
+      position: relative;
+      margin-top: 0px;
+      right: 0;
+    }
+
+    .ACA_NavBanner {
+      width: 100%;
+    }
+
+    @media (min-width: 965px) {
+      div#main {
+          width: 76vw;
+          margin-left: 12vw;
+      }
+      header {
+        text-align: right;
+      }
+      a.logo {
+        text-decoration: none;
+        position: absolute;
+        left: 1em;
+      }
+      #flyout-menu ~ nav > ul {
+        border: none;
+      }
+      #flyout-menu {
+        display: none;
+      }
+      #flyout-menu.closed ~ nav {
+        display: inline-block;
+      }
+      nav {
+        position: relative;
+        border: none;
+        /*margin-top: 1em;*/
+        height: 97%;
+        /*background-color: transparent;*/
+      }
+      nav > ul, nav > ul > li {
+          height: 100%;
+          vertical-align: text-bottom;
+      }
+      nav ul li {
+          line-height: 2.5em;
+      }
+      nav > ul > li {
+        display: inline-block;
+      }
+      ul.accessible-dropdown-nav-list {
+        position: absolute;
+        background-color: white;
+        border: 1px solid gray;
+      }
+      ul.accessible-dropdown-nav-list li {
+        border-bottom: 0.1px solid #d9d9d9;
+      }
+    }
+  </style>
+  <body>
+<header>
+      <a class="logo" title="City of Asheville main page" href="https://www.ashevillenc.gov" target="_blank" rel="noopener">
+        <img src="https://s3.amazonaws.com/coa-cdn/logo-primary.png">
+      </a>
+    </header>
+
+    <main></main>
+
+    <footer>
+      <img class="no-text-logo" src="https://s3.amazonaws.com/coa-cdn/logo-square-no-text.png">
+      <div>
+        <br>
+        The City of Asheville
+        <br>
+        70 Court Plaza
+        <br>
+        P.O. Box 7148
+        <br>
+        Asheville, NC 28002
+        <br>
+        <br>
+        828-251-1122
+        <br>
+      </div>
+    </footer>
+
+  </body>
+</html>
