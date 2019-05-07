@@ -26,15 +26,6 @@
       height: 2em;
       padding: 0.1em 0.1em 0;
     }
-    footer {
-      text-align: center;
-      font-size: 0.75em;
-      border-top: 0.1px solid #d9d9d9;
-      padding: 1em 0;
-      width: 100%;
-      position: relative;
-      bottom: 0;
-    }
     img.no-text-logo {
       height: 2em;
     }
@@ -43,21 +34,30 @@
       text-align: center;
     }
     p {
-      margin: 0 2rem;
+      margin: 1rem 2rem;
+    }
+    #link-card-container {
+      margin: 2rem;
     }
     .link-card {
-      display: inline-block;
+      display: block;
       padding: 1rem;
       background-color: #f2f2f2;
       border-radius: 6px;
       text-decoration: none;
       color: inherit;
+      flex: 1;
+      max-width: 100%;
+      justify-content: center;
+      margin: 1rem 0;
+      word-break: break-word;
     }
     .link-card .title {
       text-align: center;
       display: block;
       font-size: 1.5rem;
       color: #00488b;
+      font-weight: 600;
     }
     .link-card:hover .title, .link-card:focus .title {
       color: #003566;
@@ -67,15 +67,23 @@
       display: block;
       padding: 0.5rem;
     }
-
+    footer {
+      text-align: center;
+      font-size: 0.75em;
+      border-top: 0.1px solid #d9d9d9;
+      padding: 1em 0;
+      width: 100%;
+      position: relative;
+      bottom: 0;
+    }
     @media (min-width: 760px) {
-      main {
-        padding: 1em 2em;
-      }
       #link-card-container {
         display: flex;
         justify-content: space-between;
-        margin-top: 1rem;
+      }
+      main {
+        padding: 1em 2em;
+        min-height: 70vh;
       }
       .link-card {
         flex: 1;
@@ -100,15 +108,15 @@
 
     <main>
       <h1>Oops!</h1>
-      <p>We're having trouble finding that URL.  Try one of these links instead.</p>
+      <p>We're having trouble finding that URL.  Please try one of these links instead.</p>
       <div id="link-card-container"></div>
     </main>
     <script>
       var suggestedLinks = [
         {
           url: 'https://beta.ashevillenc.gov',
-          title: 'The city website',
-          description: 'Were you looking for coablog.ashevillenc.gov?  We recently moved the news blog and the website.',
+          title: 'The City Website',
+          description: 'Were you looking for coablog.ashevillenc.gov?  We recently moved the news blog to our new website.',
         },
         {
           url: 'https://services.ashevillenc.gov/CitizenAccess/Default.aspx',
